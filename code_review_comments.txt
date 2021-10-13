@@ -1,0 +1,14 @@
+-In lines 27-28, the code actualy produces this matrix:
+
+[[1, 4, 7]
+ [2, 5, 8]
+ [3, 6, 9]]
+
+To make it produce the desired output, add the parameter "byrow=TRUE"
+
+-In line 40, you set Z1 to the dimensions of Y. You should instead set Z1 to "X + Y" to match the
+comment. Alternatively the comment needs to be changed.
+
+-Same in line 46 with Z2
+
+-In line 85, "I" does not get set to an identity matrix. You can instead just do "I <- diag(3) 

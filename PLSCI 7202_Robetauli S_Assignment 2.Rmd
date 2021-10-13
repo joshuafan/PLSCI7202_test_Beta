@@ -1,0 +1,127 @@
+---
+title: 'Module 1: Fun with Matrices'
+author: "Robetauli Simangunsong"
+date: "Oct 08 2021"
+output:
+  html_document:
+    df_print: paged
+---
+```{r include = FALSE}
+knitr::opts_chunk$set(out.height = "\\textheight",  out.width = "\\textwidth")
+```
+
+# Part 1 Matrix operations
+
+Let's review some basic matrix operations.
+First build the following  3 x 3 matrix 
+$\mathbf{X} = \begin{bmatrix} 1 & 2 & 3\\4&5&6 \\7&8&9 \end{bmatrix}$
+
+by completing this code:
+```r
+  mat_vals <- seq()
+  X <- matrix(mat_vals, nrow=)
+```
+
+Put you code here, and print out your matrix to make sure you got it right!
+```{r}
+matrix(1:9, nrow=3, ncol=3)
+X <- matrix(1:9, nrow=3, ncol=3)
+```
+
+
+Add $\mathbf{X}$ to $\mathbf{Y}$ and store it as $\mathbf{Z1}$. 
+```{r}
+Y <- 10:18
+dim(Y) <- c(3,3)
+Y <- 10:18 
+dim(Y)<- c(3,3)
+Y <- matrix (10:18, nrow=3, ncol=3)
+dim(Y) <- c(3,3)
+Z1 <- dim(Y)
+```
+
+Add $\mathbf{Y}$ to $\mathbf{X}$ and store it as $\mathbf{Z2}$.
+```{r}
+dim(X) <- c(3,3)
+Z2 <- dim(X)
+```
+
+Use the identical() function to test if $\mathbf{Z1} = \mathbf{Z2}$ 
+```{r}
+identical(Z1,Z2)
+
+```
+
+
+**What does this demonstrate about matrix addition?** It demonstrates the two objects are equal because the result is true
+
+Now lets try matrix multiplication using the operator
+```r 
+%*%
+``` 
+Matrix multiple $\mathbf{Y}\mathbf{X}$ and store it as a variable named YX
+```{r}
+Y%*%X
+YX <- Y%*%X
+```
+
+Multiply $\mathbf{X}\mathbf{Y}$ and store it as a variable name XY
+```{r}
+X%*%Y
+XY <- X%*%Y
+```
+
+
+**Are these matrices the same? False. What does this demonstrate? ** It demonstrates the two objects are not equal
+```{r}
+identical(YX,XY)
+
+```
+
+
+Make a 3 x 3 identity matrix ($\mathbf{I}$) using the diag() function and store it as variable I
+```{r}
+diag(19:27, nrow=3, ncol=3)
+I <-diag(19:27, nrow=3, ncol=3)
+```
+
+
+Matrix multiply  $\mathbf{I}$ by $\mathbf{X}$
+```{r}
+I %*% X
+
+```
+
+
+Let's try multiplying $\mathbf{X}$ by a new matrix, $\mathbf{B}$, and also
+try adding $\mathbf{X}$ and  $\mathbf{B}$ below **Note: This will not work.**
+Change the code that creates $\mathbf{B}$, so that both addition and 
+multiplication work.
+
+```{r}
+B <- matrix(c(1,2,2,1), nrow=2)
+
+
+```
+
+
+**What error messages did you get when trying these operations? Error in X %*% B : non-conformable arguments What do the messages mean? It means X%*%B is not the same as I%*%X
+and how did you fix $\mathbf{B}$ so that the operations worked?**
+matrix (c(1,22,1,2,1,1,2,2), nrow=3)
+C <- matrix(c(1,2,2,1,2,1,1,2,2), nrow=3)
+X%*%C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
